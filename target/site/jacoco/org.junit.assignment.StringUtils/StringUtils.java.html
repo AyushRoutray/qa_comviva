@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StringUtils.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">junitassignment</a> &gt; <a href="index.source.html" class="el_package">org.junit.assignment.StringUtils</a> &gt; <span class="el_source">StringUtils.java</span></div><h1>StringUtils.java</h1><pre class="source lang-java linenums">package org.junit.assignment.StringUtils;
+
+<span class="nc" id="L3">public class StringUtils {</span>
+	 public String reverse(String input) {
+	 // Reverses the characters in the input string
+	 // Example: &quot;hello&quot; -&gt; &quot;olleh&quot;
+<span class="nc" id="L7">	 return new StringBuilder(input).reverse().toString();</span>
+	 }
+	 public boolean isPalindrome(String input) {
+	 // Checks if the input string is a palindrome
+	 // Example: &quot;radar&quot; -&gt; true, &quot;hello&quot; -&gt; false
+<span class="nc" id="L12">	 String reversed = reverse(input);</span>
+<span class="nc" id="L13">	 return input.equals(reversed);</span>
+	 }
+	 public String concatenate(String str1, String str2) {
+	 // Concatenates two strings
+	 // Example: concatenate(&quot;Hello&quot;, &quot;World&quot;) -&gt; &quot;HelloWorld&quot;
+<span class="nc" id="L18">	 return str1 + str2;</span>
+	 }
+	 public int countOccurrences(String input, char target) {
+	 // Counts the occurrences of a specific character in the input string
+	 // Example: countOccurrences(&quot;hello&quot;, 'l') -&gt; 2
+<span class="nc" id="L23">	 int count = 0;</span>
+<span class="nc bnc" id="L24" title="All 2 branches missed.">	 for (char c : input.toCharArray()) {</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">	 if (c == target) {</span>
+<span class="nc" id="L26">	 count++;</span>
+	 }
+	 }
+<span class="nc" id="L29">	 return count;</span>
+	 }
+	}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
